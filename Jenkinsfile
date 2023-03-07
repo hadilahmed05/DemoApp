@@ -1,6 +1,11 @@
 pipeline{
     
     agent any 
+
+    environment {
+        // Set the path to the Maven executable
+        PATH = "${tool 'apache-maven-3.9.0'}/bin:${env.PATH}"
+    }
     
     stages {
         
