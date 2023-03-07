@@ -4,7 +4,7 @@ pipeline{
 
     environment {
         // Set the path to the Maven executable
-        PATH = "${tool 'Maven'}/bin:${env.PATH}"
+        PATH = "${tool 'mvn'}/bin:${env.PATH}"
     }
     
     stages {
