@@ -2,10 +2,7 @@ pipeline{
     
     agent any 
 
-    environment {
-        // Set the path to the Maven executable
-        PATH = "${tool 'mvn'}/bin:${env.PATH}"
-    }
+   
     
     stages {
         
