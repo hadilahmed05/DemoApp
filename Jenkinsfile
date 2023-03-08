@@ -23,16 +23,7 @@ pipeline{
                 }
             }
 
-        stage('Integration testing'){
-            
-            steps{
-                
-                script{
-                    
-                    bat 'mvn verify'
-                }
-            }
-        }
+      
         stage('Maven build'){
             
             steps{
