@@ -29,7 +29,7 @@ pipeline{
                 
                 script{
                     
-                    bat 'mvn verify'
+                    bat 'set PATH=%PATH%;${tool 'maven'}/bin && mvn verify'
                 }
             }
         }
