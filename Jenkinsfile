@@ -19,7 +19,7 @@ pipeline{
         stage('Unit Testing'){
             
             steps{
-                  bat "set PATH=%PATH%;${tool 'maven'}/bin && mvn test"
+                   bat 'mvn test'
                 }
             }
 
