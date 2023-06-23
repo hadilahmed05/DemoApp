@@ -19,7 +19,7 @@ pipeline{
         stage('Unit Testing'){
             
             steps{
-                   bat 'mvn test'
+                   sh 'mvn test'
                 }
             }
 
@@ -30,7 +30,7 @@ pipeline{
                 
                 script{
                     
-                    bat 'mvn clean install'
+                    sh 'mvn clean install'
                 }
             }
         }
@@ -44,7 +44,7 @@ pipeline{
                     
                     withSonarQubeEnv(credentialsId: 'sonar-api') {
                         
-                        bat 'mvn clean package sonar:sonar'
+                        sh 'mvn clean package sonar:sonar'
                     }
                    }
                     
