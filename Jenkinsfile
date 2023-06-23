@@ -22,6 +22,12 @@ pipeline{
                    sh 'mvn clean'
                 }
             }
+            stage('Unit Testing'){
+            
+            steps{
+                   sh 'mvn test'
+                }
+            }
 
       
         stage('Maven build'){
