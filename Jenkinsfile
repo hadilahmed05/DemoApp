@@ -19,15 +19,10 @@ pipeline{
         stage('Unit Testing'){
             
             steps{
-                   sh 'mvn clean'
+                   sh 'mvn clean test -e -X'
                 }
             }
-            stage('Unit Testing'){
             
-            steps{
-                   sh 'mvn test'
-                }
-            }
 
       
         stage('Maven build'){
